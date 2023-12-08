@@ -1,9 +1,1 @@
-[submodule "code/tmp/activemq-artemis"]
-	path = code/tmp/activemq-artemis
-	url = git@github.com:apache/activemq-artemis.git
-[submodule "code/tmp/cassandra"]
-	path = code/tmp/cassandra
-	url = git@github.com:apache/cassandra.git
-[submodule "code/tmp/pdfbox"]
-	path = code/tmp/pdfbox
-	url = git@github.com:apache/pdfbox.git
+
