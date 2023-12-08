@@ -1,3 +1,5 @@
+# An Empirical Study of Refactorings Related to Performance Issues - Replication Package
+
 ## Requirements
 
 ### For RefactoringMiner:
@@ -33,6 +35,8 @@ The `code` directory contains the source code for extracting refactorings using 
 
 The `data` folder contains detected commits and pull requests from the issue tracker and collected commits and refactorings from RefactoringMiner.
 
+- the `data/repositories/all_projects`: contains a combined data of refactorings and refactoring patterns from all studied systems.
+
 - the `data/repositories/[project name]/commits_and_prs`: contains detected commits and pull requests
 
   1.`commits_and_prs_detected.txt` contains commits and pull request from the issue tracker
@@ -59,7 +63,9 @@ The `data` folder contains detected commits and pull requests from the issue tra
 
   4. `performance_refactorings`: contains refactorings derived from `performance_issues_refactorings` with commits collected in `Perfromance Commits` worksheet
 
-- the `data/rqs`: contains analysed data used in answering our RQs.
+#### Results
+
+The `results` folder contains analysed data used in answering our RQs.
 
 #### Scripts
 

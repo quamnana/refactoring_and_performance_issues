@@ -14,7 +14,6 @@ import org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl;
 import org.refactoringminer.util.*;
 
 public class MainClass extends Commits {
-
 	public static void main(String[] args) throws Exception {
 		// Parameters
 		String repoUrl = "https://github.com/apache/cassandra.git";
@@ -26,7 +25,7 @@ public class MainClass extends Commits {
 		 * Would be best to comment it when not in use.
 		 */
 
-		detecAllRefactroings(repoUrl, folder, branch);
+		detectAllRefactroings(repoUrl, folder, branch);
 
 		/*
 		 * Use this when detecting refactorings from a list of commits
@@ -111,7 +110,7 @@ public class MainClass extends Commits {
 
 	}
 
-	public static void detecAllRefactroings(String repoUrl, String folder, String branch) {
+	public static void detectAllRefactroings(String repoUrl, String folder, String branch) {
 
 		try {
 			GitService gitService = new GitServiceImpl();
@@ -156,10 +155,8 @@ public class MainClass extends Commits {
 			System.out.println("refactoring name : " + type);
 
 			JSONArray otherProps = refactoringObj.getJSONArray("rightSideLocations");
-			// System.out.println(otherProps);
 
 			for (int i = 0; i < otherProps.length(); i++) {
-				// ArrayList<Object> otherData = new ArrayList<Object>();
 
 				try {
 					JSONObject obj = otherProps.getJSONObject(i);
@@ -199,11 +196,10 @@ public class MainClass extends Commits {
 		FileWriter output = new FileWriter(csvFile, true);
 		CSVWriter writer = new CSVWriter(output);
 
-		// String[] headers = { "Commit ID", "Refactoring Type", "File Path", "Start
-		// Line", "End Line",
-		// "Code Element Type", "Description", "Code Element", };
+		String[] headers = { "Commit ID", "Refactoring Type", "File Path", "Start Line", "End Line",
+				"Code Element Type", "Description", "Code Element", };
 
-		// writer.writeNext(headers);
+		writer.writeNext(headers);
 
 		writer.writeNext(csvData);
 
