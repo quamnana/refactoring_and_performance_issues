@@ -14,7 +14,7 @@
 Use the following command to install dependencies
 
 ```
-pip install --upgrade pip
+pip install
 ```
 
 ### For R script:
